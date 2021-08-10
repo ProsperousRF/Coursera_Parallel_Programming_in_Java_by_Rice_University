@@ -23,8 +23,8 @@ public final class ReciprocalArraySum {
         double sum = 0;
 
         // Compute sum of reciprocals of array elements
-        for (int i = 0; i < input.length; i++) {
-            sum += 1 / input[i];
+        for (double v : input) {
+            sum += 1 / v;
         }
 
         return sum;
@@ -72,11 +72,7 @@ public final class ReciprocalArraySum {
             final int nElements) {
         final int chunkSize = getChunkSize(nChunks, nElements);
         final int end = (chunk + 1) * chunkSize;
-        if (end > nElements) {
-            return nElements;
-        } else {
-            return end;
-        }
+        return Math.min(end, nElements);
     }
 
     /**
@@ -144,8 +140,8 @@ public final class ReciprocalArraySum {
         double sum = 0;
 
         // Compute sum of reciprocals of array elements
-        for (int i = 0; i < input.length; i++) {
-            sum += 1 / input[i];
+        for (double v : input) {
+            sum += 1 / v;
         }
 
         return sum;
@@ -166,8 +162,8 @@ public final class ReciprocalArraySum {
         double sum = 0;
 
         // Compute sum of reciprocals of array elements
-        for (int i = 0; i < input.length; i++) {
-            sum += 1 / input[i];
+        for (double v : input) {
+            sum += 1 / v;
         }
 
         return sum;
