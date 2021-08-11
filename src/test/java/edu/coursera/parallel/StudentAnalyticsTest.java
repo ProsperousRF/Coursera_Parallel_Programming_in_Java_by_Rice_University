@@ -13,8 +13,12 @@ public class StudentAnalyticsTest extends TestCase {
         String ncoresStr = System.getenv("COURSERA_GRADER_NCORES");
         if (ncoresStr == null) {
             int processors = Runtime.getRuntime().availableProcessors();
+
+            // Limit of available processors
+            // also can be achieved by adding -XX:ActiveProcessorCount=2
             if (processors > 4) processors = 4;
 //      System.out.println("Available processors: " + processors);
+
             return processors;
         } else {
             return Integer.parseInt(ncoresStr);
